@@ -6,12 +6,14 @@ source ~/.config/zsh/vi.zsh
 
 export http_proxy="http://127.0.0.1:7890"
 export https_proxy="http://127.0.0.1:7890"
-
 # Qt
 export PATH=/home/ggbond/Qt/6.6.3/gcc_64/bin:$PATH
 export LD_LIBRARY_PATH=/home/ggbond/Qt/6.6.3/gcc_64/lib:$LD_LIBRARY_PATH
 export QML2_IMPORT_PATH=/home/ggbond/Qt/6.6.3/gcc_64/qml
 export QT_PLUGIN_PATH=/home/ggbond/Qt/6.6.3/gcc_64/plugins
+
+# homebrew linux
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Download zimfw plugin manager if missing.
@@ -32,8 +34,6 @@ fi
 source ${ZIM_HOME}/init.zsh
 
 
-# homebrew linux
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # yazi
 function y() {
