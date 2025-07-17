@@ -1,5 +1,6 @@
 export XDG_CONFIG_HOME=$HOME/.config
 export PATH=$HOME/.local/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR=nvim
 # 终端输出中文
 export LANG=en_US.UTF-8
