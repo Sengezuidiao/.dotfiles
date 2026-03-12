@@ -5,6 +5,12 @@ export PATH=$PATH:$LOCALBIN
 export PATH=$PATH:/usr/local/bin
 
 # homebrew
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/sbin
+export PATH=$PATH:$HOME/.linuxbrew/bin
+export PATH=$PATH:$HOME/.linuxbrew/sbin
+export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:/opt/homebrew/sbin
 export HOMEBREW_DOWNLOAD_CONCURRENCY=auto
 # --- Homebrew 自动初始化 (macOS + Linux 通用) ---
 if command -v brew >/dev/null 2>&1; then
