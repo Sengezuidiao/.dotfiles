@@ -41,3 +41,12 @@ export all_proxy=socks5://127.0.0.1:7890
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
+# fzf config
+FZF_CONFIG="$HOME/.config/zsh/fzf.zsh"
+# 如果配置文件不存在就生成
+if [ ! -f "$FZF_CONFIG" ]; then
+    fzf --zsh > "$FZF_CONFIG"
+fi
+# 加载配置
+source "$FZF_CONFIG"
