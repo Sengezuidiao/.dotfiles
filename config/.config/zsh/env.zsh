@@ -35,9 +35,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # clash 代理
-export http_proxy="http://127.0.0.1:7890"
-export https_proxy="http://127.0.0.1:7890"
-export all_proxy=socks5://127.0.0.1:7890
+export all_proxy=http://127.0.0.1:7890
 
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
