@@ -25,9 +25,10 @@ zle -N zle-keymap-select
 echo -ne '\e[5 q'
 
 # Use beam shape cursor for each new prompt.
-preexec() {
+_fix_cursor_preexec() {
 	echo -ne '\e[5 q'
 }
+preexec_functions+=(_fix_cursor_preexec)
 
 _fix_cursor() {
 	echo -ne '\e[5 q'

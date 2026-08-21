@@ -3,7 +3,7 @@ source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/vi.zsh
 source ~/.config/zsh/plugins.zsh
 source ~/.config/zsh/qt.zsh
-source ~/.config/zsh/completion.zsh
+source ~/.config/zsh/yazi.zsh
 ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Download zimfw plugin manager if missing.
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
