@@ -85,7 +85,7 @@ stow bash config tmux vim zim zsh   # macOS 跳过 bash（Linux 专用）
 
 - 入口 `zsh/.zshrc` 只做两件事：按顺序 `source ~/.config/zsh/` 下的模块，然后引导 zimfw。
 - 模块按关注点拆在 `~/.config/zsh/`：`env.zsh`（环境变量）、`aliases.zsh`、`vi.zsh`（vi 键位 + 光标）、`plugins.zsh`（fzf/autosuggest 引导）、`qt.zsh`（Linux Qt）、`yazi.zsh`。
-- **vi 模式**由 `vi.zsh` 的 `bindkey -v` 统一管理，zim 的 `input` 模块已移除（二者职责重叠）。
+- **vi 模式**由 `vi.zsh` 的 `bindkey -v` + 光标函数管理；zim 的 `input` 模块负责终端按键（方向键/Home/End/Delete/`edit-command-line` 等），二者互补。
 - **代理**：`env.zsh` 里 `all_proxy=http://127.0.0.1:7890` 常开。
 - **Linux Qt/clash**：`qt.zsh` 默认关闭，需要时 `export DOTFILES_LINUX_QT=1` 再开新 shell。
 - `fzf.zsh` 是 `fzf --zsh` 的生成产物，已在 `.gitignore`，不入库；首次启动（已装 fzf）自动生成。
@@ -98,5 +98,4 @@ stow bash config tmux vim zim zsh   # macOS 跳过 bash（Linux 专用）
 - ~~旧 `~/.config` 仓库残留~~ ✅ 已清理：`~/.config/.git` 已删除，`~/.config` 现在是纯运行时目录（`clash/ copyq/ coc/ QtProject/ nvim/ ...` 不再被当仓库管）。注意 `~/.config/nvim` 是**独立仓库**（`Sengezuidiao/nvim`），与 dotfiles 无关；原 `Sengezuidiao/.config` 远程仓库在 GitHub 上已不存在。
 - ~~fzf 补全重复加载~~ ✅ 已去重：删掉旧版 `completion.zsh`（205 行），统一由 `fzf --zsh` 生成的 `fzf.zsh` 提供。
 - ~~`plugins.zsh` 死代码~~ ✅ 已清理：原来引用已删除的 `~/.config/zsh/zimrc`，现改为 fzf/autosuggest 引导。
-- ~~zim `input` 模块与 `vi.zsh` 重叠~~ ✅ 已移除 `input`，vi 模式由 `vi.zsh` 统一管理。
 - ~~`CMAKE_PREFIX_PATH` 缺 `$`~~ ✅ 已修复：`zsh/.zprofile` 改为 `$QT6_DIR`。
