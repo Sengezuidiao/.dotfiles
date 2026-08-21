@@ -1,2 +1,6 @@
 fzf.zsh
 .DS_Store
+
+# yazi 插件/flavor 由 `ya pkg` 管理，package.toml 是唯一来源，下载产物不入库
+config/.config/yazi/plugins/
+config/.config/yazi/flavors/

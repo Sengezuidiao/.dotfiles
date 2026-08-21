@@ -1,12 +1,7 @@
 [[plugin.deps]]
-use = "llanosrocas/yaziline"
-rev = "d9cc2cb"
-hash = "b6073aadf2f9a1d5389a6d389f33f69c"
-
-[[plugin.deps]]
-use = "Rolv-Apneseth/starship"
-rev = "a837101"
-hash = "635b0feb9215772d22020eb0abf0bb34"
+use = "yazi-rs/plugins:full-border"
+rev = "4848aac"
+hash = "f281261ff04ad7ec867c3f802a50835f"
 
 [[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
